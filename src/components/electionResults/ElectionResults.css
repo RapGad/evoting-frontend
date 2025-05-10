@@ -1,0 +1,186 @@
+.election-results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  .results-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .results-header h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .category-selector {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  .category-tab {
+    padding: 0.5rem 1rem;
+    background: #f1f2f6;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .category-tab:hover {
+    background: #dfe4ea;
+  }
+  
+  .category-tab.active {
+    background: #3498db;
+    color: white;
+  }
+  
+  .results-table {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .table-header h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+  }
+  
+  .winner-badge {
+    background: #2ecc71;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  th {
+    text-align: left;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #f1f2f6;
+  }
+  
+  .winner-row {
+    background-color: rgba(46, 204, 113, 0.05);
+  }
+  
+  .winner-row td {
+    font-weight: 500;
+  }
+  
+  .candidate-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .candidate-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #dfe6e9;
+  }
+  
+  .total-votes {
+    text-align: right;
+    font-weight: 500;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+  }
+  
+  /* Loading and Error States */
+  .loading-container, .error-container, .no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    text-align: center;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(52, 152, 219, 0.2);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  .error-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .retry-button {
+    padding: 0.6rem 1.2rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .election-results-container {
+      padding: 1rem;
+    }
+    
+    .table-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .category-selector {
+      justify-content: flex-start;
+    }
+    
+    th, td {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+    
+    .candidate-photo {
+      width: 32px;
+      height: 32px;
+    }
+  }
