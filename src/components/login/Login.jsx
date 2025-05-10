@@ -20,7 +20,8 @@ const Login = () => {
     e.preventDefault();
 
     const data = { indexNumber, otp };
-    console.log(error);
+    setLoginError(error);
+    setTimeout(() => setLoginError(null), 3000);
     dispatch(verifyOtp(data));
   };
 
