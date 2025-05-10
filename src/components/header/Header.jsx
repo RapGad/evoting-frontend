@@ -30,14 +30,26 @@ const Header = ({ user }) => {
         {/* Desktop Navigation */}
         <nav className="nav-links desktop-nav">
 
-          <Link to="/result">
+         {/*  <Link to="/result">
           <motion.span 
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.98 }}
           >
             Results
           </motion.span>
-          </Link>
+          </Link> */}
+
+          <motion.span
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={() => {
+              localStorage.removeItem("auth");
+              sessionStorage.removeItem("token");
+              window.location.reload();
+            }}
+          >
+            Logout
+          </motion.span>
          
         </nav>
 
