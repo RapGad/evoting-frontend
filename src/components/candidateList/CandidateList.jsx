@@ -211,7 +211,7 @@ const CandidateList = () => {
                   className="modal-party-badge"
                   style={{ backgroundColor: "#3498db" }}
                 >
-                  President
+                  {selectedCandidate[0].categoryName}
                 </div>
               </div>
 
