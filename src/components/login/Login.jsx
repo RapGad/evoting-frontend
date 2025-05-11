@@ -10,7 +10,7 @@ const Login = () => {
   const [indexNumber, setIndexNumber] = useState("");
   const [loginError, setLoginError] = useState(null);
   const [otp, setOtp] = useState("");
-  const { loading, error, user, message, token } = useSelector(
+  const { loading, error, user, token } = useSelector(
     (state) => state.verifyOtp
   );
   const dispatch = useDispatch();

@@ -45,7 +45,7 @@ const Header = ({ user }) => {
             onClick={() => {
               localStorage.removeItem("auth");
               sessionStorage.removeItem("token");
-              window.location.reload();
+              window.location.href = "/";
             }}
           >
             Logout
